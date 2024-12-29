@@ -1,0 +1,21 @@
+:root {
+  --bg-color-light: #ffffff;
+  --bg-color-dark: #1a202c;
+}
+
+body {
+  background-color: var(--bg-color-light);
+  transition: background-color 0.2s ease-in-out;
+}
+
+[data-theme='dark'] {
+  --bg-color: var(--bg-color-dark);
+}
+
+[data-theme='light'] {
+  --bg-color: var(--bg-color-light);
+}
+
+body {
+  background-color: var(--bg-color);
+}
