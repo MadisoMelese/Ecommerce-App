@@ -5,11 +5,12 @@ import ProductCard from "../ProductCard";
 import { useEffect } from "react";
 
 const HomePage = () => {
+
   const { fetchProducts, products } = useProductStore();
   useEffect(()=>{
     fetchProducts()
   }, [fetchProducts])
-  console.log("products: ", products)
+  // console.log("products: ", products)
   return (
     <Container>
       <VStack spaceY='8'>
@@ -41,6 +42,7 @@ const HomePage = () => {
       </SimpleGrid>
 
 {/* // Page Not Found */}
+      {!products.length &&       
       <Text
           fontSize={'xl'}
           fontWeight="bold"
@@ -49,11 +51,11 @@ const HomePage = () => {
       >
         No Products Found😉 {' '}
         <Link to={"/create"}>
-            <Text as="span" color="blue.500" _hover={{textDecoration:"underline"}}>
+            <Text as="span" color="blue.500" _hover=  {{textDecoration:"underline"}}>
               Create A Product
             </Text>
         </Link>
-      </Text>
+      </Text> }
 
       </VStack>
     </Container>
