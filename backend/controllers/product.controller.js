@@ -7,7 +7,7 @@ const getAllProducts = async (req, res) => {
     const products = await Product.find();
     res.json({success:true, data: products});
   }catch(error){
-    console.error(error);
+    // console.error(error);
     res.status(500).json({success:false, message: 'Server error'});
   }
 }
@@ -23,7 +23,7 @@ const getProduct = async (req, res) => {
     const product = await Product.findById(id);
     res.status(200).json({success:true, data: product});
   }catch(error){
-    console.error(error);
+    // console.error(error);
     res.status(400).json({success:false, message: 'This product not found'});
   }
 }
@@ -39,7 +39,7 @@ const postNewProduct = async (req, res) => {
     await newProduct.save();
     res.status(201).json({success:true, data: newProduct});
   }catch(error){
-    console.error(error);
+    // console.error(error);
     res.status(500).json({success:false, message: 'server error'});
   }
 }
@@ -56,7 +56,7 @@ const updateProduct = async (req, res) => { //the d/ce b/n
     const updatedProduct = await Product.findByIdAndUpdate(id, product, {new:true});
     res.status(200).json({success:true, data: updatedProduct});
   }catch(error){
-    console.error(error);
+    // console.error(error);
     res.status(400).json({success:false, message: 'This product not found'});
   }
 }
@@ -75,7 +75,7 @@ const deleteProduct = async (req, res) => {
       res.status(200).json({success:true, message: 'Product deleted successfully'});
     }
   }catch(error){
-    console.error(error);
+    // console.error(error);
     res.status(500).json({success:false, message: 'server error'});
   }
 }
