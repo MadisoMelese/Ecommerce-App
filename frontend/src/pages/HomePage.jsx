@@ -62,7 +62,7 @@ const HomePage = () => {
         <h>Loading...</h>
       ) : (
         <>
-          {products.length === 0 && !isLoading ? (
+          {products.length === 0 && isLoading ? (
             <Text fontSize='xl' textAlign='center' fontWeight='bold' color='gray.500'>
               No products found 😢{" "}
               <Link to={"/create"}>
