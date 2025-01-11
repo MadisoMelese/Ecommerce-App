@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useProductStore } from "../store/product";
 import ProductCard from "../components/ProductCard";
+import LoadingPage from './LoadingPage'
 
 const HomePage = () => {
 	const [isLoading, setIsLoading] = useState(false)
@@ -32,7 +33,7 @@ const HomePage = () => {
 				</Text>
 
       {isLoading && products.length === 0 ? (
-        <h>Loading...</h>
+       <LoadingPage />
       ) : (
         <>
           {products.length === 0 && isLoading ? (
