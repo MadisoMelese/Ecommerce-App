@@ -4,10 +4,10 @@ import { Box, Spinner, Text, VStack } from '@chakra-ui/react';
 const LoadingPage = () => {
   return (
     <Box
-      d="flex"
+      display="flex"
       alignItems="center"
       justifyContent="center"
-      h="100vh"
+      height="100vh"
       bgGradient="linear(to-r, teal.300, blue.500)"
     >
       <VStack spacing={4}>
@@ -17,6 +17,7 @@ const LoadingPage = () => {
           emptyColor="gray.200"
           color="blue.500"
           size="xl"
+          animation="spin 2s linear infinite"
         />
         <Text fontSize="2xl" color="white" fontWeight="bold">
           Loading...
