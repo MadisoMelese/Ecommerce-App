@@ -13,7 +13,7 @@ const HomePage = () => {
 		const timer = setTimeout(()=>{
 			setIsLoading(false)
 			fetchProducts();
-		}, 1000)
+		}, 2000)
 		return () => clearTimeout(timer);
 	}, [fetchProducts]);
 	// console.log("products", products);
