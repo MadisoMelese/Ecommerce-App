@@ -39,7 +39,7 @@ const HomePage = () => {
 					))}
 				</SimpleGrid>
 
-				{products.length === 0 && (
+{/* 				{products.length === 0 && (
 					<Text fontSize='xl' textAlign={"center"} fontWeight='bold' color='gray.500'>
 						No products found 😢{" "}
 						<Link to={"/create"}>
@@ -48,7 +48,7 @@ const HomePage = () => {
 							</Text>
 						</Link>
 					</Text>
-				)}
+				)} */}
 			</VStack>
 		</Container>
 	);
