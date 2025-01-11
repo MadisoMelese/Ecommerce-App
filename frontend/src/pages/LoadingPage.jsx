@@ -8,7 +8,8 @@ const LoadingPage = () => {
       alignItems="center"
       justifyContent="center"
       height="100vh"
-      bgGradient="linear(to-r, teal.300, blue.500)"
+      width="100vw"
+      bgGradient="linear(to-r, black, blackAlpha.800)"
     >
       <VStack spacing={4}>
         <Spinner
